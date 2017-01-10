@@ -43,6 +43,7 @@ public class NoRebaseFile {
 	 */
 	public void featureMethod() {
 		logger.info("模拟测试分支2第二次提交的方法" + "测试文件的修改第二个文件");
+		logger.info("rebase分支不推送develop第一次提交");
 	}
 
 }

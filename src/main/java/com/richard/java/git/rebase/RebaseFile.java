@@ -70,6 +70,13 @@ public class RebaseFile {
 	 */
 	public void rebaseEachPush(int times) {
 		logger.info("第二次提交");
+		logger.info("先执行合并，然后再撤销操作，执行变基");
+		logger.info("rebase分支第一次rebase之前的develop分支提交");
+		logger.info("测试rebase分支的第一次提交");
+		logger.info("测试rebase分支的第二次提交");
+		logger.info("rebase分支第二次rebase之前的develop分支提交");
+		logger.info("测试rebase分支的第三次提交");
+		logger.info("测试rebase分支的第四次提交");
 	}
 
 }
