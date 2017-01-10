@@ -50,7 +50,7 @@ public class AnotherNoRebaseFile {
 	 * @param times
 	 */
 	public void featureMethod(int times) {
-		logger.info("这是分支中的第" + times + "方法");
+		logger.info("这是分支中的第" + times + "方法" + "测试reset文件的修改");
 	}
 
 }
