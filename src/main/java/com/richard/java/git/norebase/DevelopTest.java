@@ -61,5 +61,19 @@ public class DevelopTest {
 	public void methodForFeature() {
 		logger.info("测试每次分支push之前都rebase");
 	}
+	
+	/**
+	 * <p>测试冲突的方法</p>
+	 */
+	public void methodConfict() {
+		logger.info("测试冲突的方法");
+	}
+
+        /**
+         * <p>测试冲突</p>
+         */
+        public void methodConfict(int times) {
+                logger.info("测试冲突");
+        }
 
 }
