@@ -44,5 +44,13 @@ public class AnotherNoRebaseFile {
 	public void featureMethod() {
 		logger.info("测试分支b第二次提交的测试代码");
 	}
+	
+	/**
+	 * <p>测试分支b中第三次提交的方法</p>
+	 * @param times
+	 */
+	public void featureMethod(int times) {
+		logger.info("这是分支中的第" + times + "方法");
+	}
 
 }
