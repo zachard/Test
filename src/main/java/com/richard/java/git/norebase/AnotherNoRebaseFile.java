@@ -37,5 +37,12 @@ public class AnotherNoRebaseFile {
 	public void noRebaseTest() {
 		logger.info("Git No Rebase Method ");
 	}
+	
+	/**
+	 * <p>测试分支b第二次提交的方法</p>
+	 */
+	public void featureMethod() {
+		logger.info("测试分支b第二次提交的测试代码");
+	}
 
 }
