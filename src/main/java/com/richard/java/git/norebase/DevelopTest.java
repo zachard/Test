@@ -37,5 +37,13 @@ public class DevelopTest {
 	public void methodBrforeRebase() {
 		logger.info("测试rebase之前的一次提交");
 	}
+	
+	/**
+	 * <p>测试rebase之前的develop分支第二次提交</p>
+	 * @param times
+	 */
+	public void methodBeforeRebase(int times) {
+		logger.info("测试rebase之前第二次代码提交");
+	}
 
 }
