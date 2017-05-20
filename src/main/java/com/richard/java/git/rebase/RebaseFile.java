@@ -55,5 +55,21 @@ public class RebaseFile {
 	public void rebaseMethod(String time) {
 		logger.info("测试rebase分支B第三次提交");
 	}
+	
+	/**
+	 * <p>每次push之前都rebase测试分支A第一次提交</p>
+	 */
+	public void rebaseEachPush() {
+		logger.info("每次push之前都rebase分支A第一次提交");
+	}
+	
+	/**
+	 * <p>第二次提交</p>
+	 * 
+	 * @param times
+	 */
+	public void rebaseEachPush(int times) {
+		logger.info("第二次提交");
+	}
 
 }

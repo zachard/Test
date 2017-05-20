@@ -45,5 +45,21 @@ public class DevelopTest {
 	public void methodBeforeRebase(int times) {
 		logger.info("测试rebase之前第二次代码提交");
 	}
+	
+	/**
+	 * <p>测试每次push之前都进行rebase的develop提交</p>
+	 * 
+	 * @param times  提交次数
+	 */
+	public void methodBeforeRebase(String times) {
+		logger.info("测试每次分支push之前都rebase");
+	}
+	
+	/**
+	 * <p>测试每次push之前都进行rebase创建第二个分支之前的develop提交</p>
+	 */
+	public void methodForFeature() {
+		logger.info("测试每次分支push之前都rebase");
+	}
 
 }
