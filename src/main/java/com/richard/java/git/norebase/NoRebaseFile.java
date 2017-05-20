@@ -37,5 +37,12 @@ public class NoRebaseFile {
 	public void rebaseTest() {
 		logger.info("模拟测试方法");
 	}
+	
+	/**
+	 * <p>Git No Rebase方法第二次提交测试</p>
+	 */
+	public void featureMethod() {
+		logger.info("模拟测试分支2第二次提交的方法");
+	}
 
 }
