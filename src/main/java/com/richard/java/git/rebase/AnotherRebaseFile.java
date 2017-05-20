@@ -37,5 +37,13 @@ public class AnotherRebaseFile {
 	public void methodRebase() {
 		logger.info("rebase分支A第一次提交代码");
 	}
+	
+	/**
+	 * <p>用于测试rebase分支A第二次提交代码</p>
+	 * @param times
+	 */
+	public void methodRebase(int times) {
+		logger.info("rebase分支A第二次提交代码");
+	}
 
 }
