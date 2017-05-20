@@ -69,4 +69,11 @@ public class DevelopTest {
 		logger.info("测试冲突的方法");
 	}
 
+    /**
+     * <p>测试冲突</p>
+     */
+    public void methodConfict(int times) {
+            logger.info("测试冲突");
+    }
+
 }
