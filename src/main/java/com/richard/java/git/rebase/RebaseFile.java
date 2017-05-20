@@ -37,5 +37,14 @@ public class RebaseFile {
 	public void rebaseMethod() {
 		logger.info("测试rebase第一次提交的代码");
 	}
+	
+	/**
+	 * <p>测试rebase第二次提交代码的方法</p>
+	 * 
+	 * @param time   提交次数
+	 */
+	public void rebaseMethod(int time) {
+		logger.info("测试rebase第二次提交的代码");
+	}
 
 }
