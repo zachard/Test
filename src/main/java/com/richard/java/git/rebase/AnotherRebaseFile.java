@@ -45,5 +45,12 @@ public class AnotherRebaseFile {
 	public void methodRebase(int times) {
 		logger.info("rebase分支A第二次提交代码");
 	}
+	
+	/**
+	 * <p>每次push之前都进行rebase的分支B第一次提交</p>
+	 */
+	public void methodEachRebase() {
+		logger.info("每次push之前都进行rebase分支B第一次提交");
+	}
 
 }
