@@ -26,8 +26,6 @@ import java.io.InputStreamReader;
 import org.apache.log4j.Logger;
 import org.junit.Test;
 
-import au.com.bytecode.opencsv.CSVReader;
-
 /**
  * 测试Reader读取CVS文件
  * <p></p>
@@ -53,7 +51,7 @@ public class FileUtilTest {
 			reader = new BufferedReader(inputReader);
 			while ((str = reader.readLine()) != null) {
 			        logger.info("求冲突");
-                        	logger.info(str);
+                    logger.info(str);
 			}
 		} catch (FileNotFoundException nfe) {
 			logger.error("文件不存在");
