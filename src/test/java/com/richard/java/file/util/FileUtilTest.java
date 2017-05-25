@@ -53,6 +53,7 @@ public class FileUtilTest {
 			        logger.info("求冲突");
                     logger.info(str);
                     logger.info("紧急修改之后");
+                    logger.info("测试紧急修改之前");
 			}
 		} catch (FileNotFoundException nfe) {
 			logger.error("文件不存在");
