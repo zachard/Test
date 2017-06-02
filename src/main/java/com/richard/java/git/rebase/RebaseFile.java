@@ -74,6 +74,7 @@ public class RebaseFile {
 		logger.info("rebase分支第一次rebase之前的develop分支提交");
 		logger.info("rebase分支第二次rebase之前的develop分支提交");
 		logger.info("测试rebase分支的第一次提交");
+		logger.info("测试rebase分支的第二次提交");
 	}
 
 }
