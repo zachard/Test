@@ -53,6 +53,7 @@ public class AnotherRebaseFile {
 		logger.info("每次push之前都进行rebase分支B第一次提交");
 		logger.info("develop分支在feature-test第一次进行rebase之前的提交");
 		logger.info("feature-test分支在第一次rebase之前的第一次提交");
+		logger.info("feature-test分支在第一次rebase之前的第二次提交");
 	}
 	
 	/**
