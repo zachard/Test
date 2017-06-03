@@ -61,6 +61,7 @@ public class AnotherRebaseFile {
 	public void methodEachRebase(int times) {
 		logger.info("第二次提交");
 		logger.info("feature-rebase在第一次rebase之前develop的提交");
+		logger.info("feature-rebase分支在第一次rebase之前的第一次提交");
 	}
 
 }
