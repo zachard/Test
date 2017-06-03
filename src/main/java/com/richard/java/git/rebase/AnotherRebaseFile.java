@@ -76,6 +76,7 @@ public class AnotherRebaseFile {
 		logger.info("develop分支的第二次提交");
 		
 		logger.info("feature-test第一次提交");
+		logger.info("feature-test分支的第二次提交");
 	}
 
 }
