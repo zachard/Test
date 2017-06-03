@@ -71,6 +71,8 @@ public class AnotherRebaseFile {
 		logger.info("feature-rebase分支在第一次rebase之前的第一次提交");
 		logger.info("feature-rebase分支在第一次rebase之前的第二次提交");
 		logger.info("feature-rebase分支在第一次rebase之前的第三次提交");
+		
+		logger.info("feature-test第一次提交");
 	}
 
 }
