@@ -36,6 +36,7 @@ public class AnotherRebaseFile {
 	 */
 	public void methodRebase() {
 		logger.info("rebase分支A第一次提交代码");
+		logger.info("develop分支的第一次提交");
 	}
 	
 	/**
