@@ -51,6 +51,7 @@ public class AnotherRebaseFile {
 	 */
 	public void methodEachRebase() {
 		logger.info("每次push之前都进行rebase分支B第一次提交");
+		logger.info("feature-test分支在第一次rebase之前的第一次提交");
 	}
 	
 	/**
