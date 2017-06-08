@@ -16,10 +16,9 @@
 
 package com.richard.java.learn.quartz;
 
-import java.util.Date;
-
 import org.apache.log4j.Logger;
 import org.quartz.Job;
+import org.quartz.JobDataMap;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 
@@ -40,11 +39,16 @@ public class HelloJob implements Job {
 	private static final Logger logger = Logger.getLogger(HelloJob.class);
 	
 	/**
+	 * Job属性
+	 */
+	String jobSays;
+	
+	/**
 	 * 默认构造器
 	 * <p>默认构造器在Job实现类中必须存在</p>
 	 */
 	public HelloJob() {
-		
+		setJobSays("Test");
 	}
 
 	/**
@@ -54,7 +58,19 @@ public class HelloJob implements Job {
 	 */
 	@Override
 	public void execute(JobExecutionContext context) throws JobExecutionException {
-		logger.info("Hello Quartz" + new Date());
+		JobDataMap jobDataMap = context.getMergedJobDataMap();
+		String jobSays = jobDataMap.getString("jobSays");
+		String anotherJobSays = this.jobSays;
+		logger.info("打印值" + jobSays + "; setter方法设置的值: " + anotherJobSays);
+	}
+
+	/**
+	 * jobSays属性设置
+	 * 
+	 * @param jobSays   需要设置的值
+	 */
+	public void setJobSays(String jobSays) {
+		this.jobSays = jobSays;
 	}
 
 }
