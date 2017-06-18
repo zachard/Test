@@ -61,6 +61,8 @@ public class Tutorial {
         	//这里的用户名和密码必须是在shiro.ini文件中配置的(因为SecurityManager是基于该文件创建)
             UsernamePasswordToken token = new UsernamePasswordToken("lonestarr", "vespa");
             token.setRememberMe(true);
+            log.info("是否记住了：" + subject.isRemembered());
+            log.info("当前会话是否通过认证：" + subject.isAuthenticated());
             try {
             	subject.login(token);
             } catch (UnknownAccountException uae) {
@@ -76,6 +78,9 @@ public class Tutorial {
                 //unexpected condition?  error?
             }
         }
+        
+        log.info("是否记住了：" + subject.isRemembered());
+        log.info("当前会话是否通过认证：" + subject.isAuthenticated());
         
         //say who they are:
         //print their identifying principal (in this case, a username):
