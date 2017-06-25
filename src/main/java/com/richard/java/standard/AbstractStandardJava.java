@@ -18,6 +18,7 @@ import java.io.File;
  *
  * @author richard
  */
+@SuppressWarnings("all")
 public abstract class AbstractStandardJava {
 
     /**
