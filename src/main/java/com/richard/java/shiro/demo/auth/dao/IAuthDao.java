@@ -14,30 +14,23 @@
  *    limitations under the License.
  */
 
-package com.richard.java.shiro;
+package com.richard.java.shiro.demo.auth.dao;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+import java.util.List;
+
+import com.richard.java.shiro.demo.base.model.AuthMap;
+import com.richard.java.shiro.demo.base.model.User;
 
 /**
- * 解码配置文件
+ * The description...
  * <p></p>
  *
  * @author Richard
  * @version 1.0.0
  */
-public class DecryptDruidSourceTest {
+public interface IAuthDao {
 	
-	private static DecryptDruidSource source = null;
-	
-	@BeforeClass
-	public static void init() {
-		source = new DecryptDruidSource();
-	}
-
-	@Test
-	public void test() {
-		source.setUsername("f0PSl0Lzxh6CxzuFIdEg+wVx045fSE2VtUP45G9HH2cjVQnmGGgcK5CLzNUJoR6tGwRO44h74OxrBWuDzWC8jg==");
-	}
-
+	User findByName(String name);
+    List<AuthMap> getAllAuthcMap();
+    
 }

@@ -14,30 +14,35 @@
  *    limitations under the License.
  */
 
-package com.richard.java.shiro;
+package com.richard.java.shiro.demo;
 
-import org.junit.BeforeClass;
+import static org.junit.Assert.assertTrue;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
- * 解码配置文件
+ * The description...
  * <p></p>
  *
  * @author Richard
  * @version 1.0.0
  */
-public class DecryptDruidSourceTest {
-	
-	private static DecryptDruidSource source = null;
-	
-	@BeforeClass
-	public static void init() {
-		source = new DecryptDruidSource();
-	}
+public class AppTest {
 
 	@Test
-	public void test() {
-		source.setUsername("f0PSl0Lzxh6CxzuFIdEg+wVx045fSE2VtUP45G9HH2cjVQnmGGgcK5CLzNUJoR6tGwRO44h74OxrBWuDzWC8jg==");
+	public void testApp() throws SQLException {
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath*:conf/*-beans.xml");
+		DataSource ds = (DataSource) ctx.getBean("ds-default");
+        Connection con = ds.getConnection();
+        con.close();
+        assertTrue(true);
 	}
 
 }

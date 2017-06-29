@@ -14,30 +14,15 @@
  *    limitations under the License.
  */
 
-package com.richard.java.shiro;
-
-import org.junit.BeforeClass;
-import org.junit.Test;
+package com.richard.java.shiro.demo.base;
 
 /**
- * 解码配置文件
+ * The description...
  * <p></p>
  *
  * @author Richard
  * @version 1.0.0
  */
-public class DecryptDruidSourceTest {
-	
-	private static DecryptDruidSource source = null;
-	
-	@BeforeClass
-	public static void init() {
-		source = new DecryptDruidSource();
-	}
-
-	@Test
-	public void test() {
-		source.setUsername("f0PSl0Lzxh6CxzuFIdEg+wVx045fSE2VtUP45G9HH2cjVQnmGGgcK5CLzNUJoR6tGwRO44h74OxrBWuDzWC8jg==");
-	}
-
+public enum AuthType {
+    roles,perms,anon,authc
 }

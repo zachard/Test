@@ -14,30 +14,41 @@
  *    limitations under the License.
  */
 
-package com.richard.java.shiro;
+package com.richard.java.shiro.demo.auth.service;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
+import java.util.List;
+
+import org.apache.shiro.authc.AuthenticationException;
+
+import com.richard.java.shiro.demo.base.model.AuthMap;
 
 /**
- * 解码配置文件
+ * 权限认证业务层接口
+ * 
  * <p></p>
  *
  * @author Richard
  * @version 1.0.0
  */
-public class DecryptDruidSourceTest {
+public interface IAuthService {
 	
-	private static DecryptDruidSource source = null;
-	
-	@BeforeClass
-	public static void init() {
-		source = new DecryptDruidSource();
-	}
+	/**
+     * 用户登录接口
+     * @param userName 登录用户名
+     * @param password 密码
+     * @throws AuthenticationException
+     */
+    void login(String userName, String password) throws AuthenticationException;
 
-	@Test
-	public void test() {
-		source.setUsername("f0PSl0Lzxh6CxzuFIdEg+wVx045fSE2VtUP45G9HH2cjVQnmGGgcK5CLzNUJoR6tGwRO44h74OxrBWuDzWC8jg==");
-	}
+    /**
+     * 用户登出系统
+     */
+    void logout();
 
+    /**
+     * 获得数据库中存储的访问控制数据
+     * @return
+     */
+    List<AuthMap> getFilterChainDefinitions();
+    
 }

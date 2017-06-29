@@ -16,28 +16,28 @@
 
 package com.richard.java.shiro;
 
-import org.junit.BeforeClass;
+import org.apache.shiro.config.IniSecurityManagerFactory;
+import org.apache.shiro.mgt.SecurityManager;
+import org.apache.shiro.util.Factory;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * 解码配置文件
+ * shiro学习登录/登出测试类
  * <p></p>
  *
  * @author Richard
  * @version 1.0.0
  */
-public class DecryptDruidSourceTest {
+public class LoginLogoutTest {
 	
-	private static DecryptDruidSource source = null;
-	
-	@BeforeClass
-	public static void init() {
-		source = new DecryptDruidSource();
-	}
+	private static final Logger logger = LoggerFactory.getLogger(LoginLogoutTest.class);
 
 	@Test
-	public void test() {
-		source.setUsername("f0PSl0Lzxh6CxzuFIdEg+wVx045fSE2VtUP45G9HH2cjVQnmGGgcK5CLzNUJoR6tGwRO44h74OxrBWuDzWC8jg==");
+	public void testLoginLogout() {
+		//IniSecurityManagerFactory是一个基于ini配置文件创建SecurityManager实例的工厂
+		Factory<SecurityManager> factory = new IniSecurityManagerFactory("classpath:shiro.ini");
 	}
 
 }
