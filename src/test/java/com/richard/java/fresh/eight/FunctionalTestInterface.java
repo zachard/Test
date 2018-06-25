@@ -14,43 +14,42 @@
  *    limitations under the License.
  */
 
-package com.richard.java.git.norebase;
-
-import org.apache.log4j.Logger;
+package com.richard.java.fresh.eight;
 
 /**
- * <code>AnotherNoRebaseFile.java</code>
- * <pre>
- *     The description...
- * </pre>
+ * Java8 函数式接口测试
+ * 
+ * <p>函数式接口只能包含一个方法</p>
  *
  * @author Richard
  * @version 1.0.0
  */
-public class AnotherNoRebaseFile {
-	
-	private static Logger logger = Logger.getLogger(AnotherNoRebaseFile.class);
+@FunctionalInterface
+public interface FunctionalTestInterface {
 	
 	/**
-	 * <p>Git No Rebase 测试分支 b</p>
+	 * 函数式接口只能包含一个方法
 	 */
-	public void noRebaseTest() {
-		logger.info("Git No Rebase Method ");
+	void method();
+	
+	/**
+	 * 这个方法存在时，会编译不通过
+	 */
+	//void anotherMethod();
+	
+	/**
+	 * 函数式接口可以含有default修饰的函数
+	 * 
+	 * <p>这个在接口中的函数包含有方法体</p>
+	 */
+	default void defaultMethod() {
+		
 	}
 	
 	/**
-	 * <p>测试分支b第二次提交的方法</p>
+	 * 函数式接口可以含有多个default修饰的有方法体的函数
 	 */
-	public void featureMethod() {
-		logger.info("测试分支b第二次提交的测试代码");
+	default String anotherMethod() {
+		return null;
 	}
-	
-	/**
-	 * <p>测试分支b中第三次提交的方法</p>
-	 * @param times
-	 */
-	public void featureMethod(int times) {
-		logger.info("这是分支中的第" + times + "方法" + "测试reset文件的修改");
-	}
-
 }

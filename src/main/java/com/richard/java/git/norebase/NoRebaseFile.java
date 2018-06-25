@@ -42,7 +42,10 @@ public class NoRebaseFile {
 	 * <p>Git No Rebase方法第二次提交测试</p>
 	 */
 	public void featureMethod() {
-		logger.info("模拟测试分支2第二次提交的方法");
+		logger.info("模拟测试分支2第二次提交的方法" + "测试文件的修改第二个文件");
+		logger.info("rebase分支不推送develop第一次提交");
+		logger.info("rebase分支不推送develop第二次提交");
+		logger.info("rebase分支不推送develop第三次提交");
 	}
 
 }

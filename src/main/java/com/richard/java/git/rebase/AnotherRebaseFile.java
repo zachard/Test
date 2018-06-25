@@ -36,6 +36,10 @@ public class AnotherRebaseFile {
 	 */
 	public void methodRebase() {
 		logger.info("rebase分支A第一次提交代码");
+		logger.info("develop分支的第一次提交");
+		logger.info("develop分支的第二次提交");
+		logger.info("feature-test分支的第一次提交");
+		logger.info("feature-test分支的第二次提交");
 	}
 	
 	/**
@@ -51,6 +55,13 @@ public class AnotherRebaseFile {
 	 */
 	public void methodEachRebase() {
 		logger.info("每次push之前都进行rebase分支B第一次提交");
+		logger.info("develop分支在feature-test第一次进行rebase之前的提交");
+		logger.info("feature-test分支在第一次rebase之前的第一次提交");
+		logger.info("feature-test分支在第一次rebase之前的第二次提交");
+		logger.info("develop分支在feature-test第二次进行rebase之前的提交");
+		logger.info("feature-test分支在第二次rebase之前的第一次提交");
+		logger.info("feature-test分支在第二次rebase之前的第二次提交");
+		logger.info("feature-test分支在第二次rebase之前的第三次提交");
 	}
 	
 	/**
@@ -60,6 +71,17 @@ public class AnotherRebaseFile {
 	 */
 	public void methodEachRebase(int times) {
 		logger.info("第二次提交");
+		logger.info("feature-rebase在第一次rebase之前develop的提交");
+		logger.info("feature-rebase分支在第一次rebase之前的第一次提交");
+		logger.info("feature-rebase分支在第一次rebase之前的第二次提交");
+		logger.info("feature-rebase分支在第一次rebase之前的第三次提交");
+		
+		logger.info("develop分支的第一次提交");
+		logger.info("develop分支的第二次提交");
+		
+		logger.info("feature-test第一次提交");
+		logger.info("feature-test分支的第二次提交");
+		logger.info("feature-test分支的第三次提交");
 	}
 
 }
